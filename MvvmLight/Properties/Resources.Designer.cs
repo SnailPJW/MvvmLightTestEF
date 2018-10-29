@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MvvmLight.Properties
+namespace MvvmLight4EF.Properties
 {
     using System;
 

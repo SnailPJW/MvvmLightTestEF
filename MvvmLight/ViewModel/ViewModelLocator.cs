@@ -13,9 +13,9 @@
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using CommonServiceLocator;
-using MvvmLight.Model;
+using MvvmLight4EF.Model;
 
-namespace MvvmLight.ViewModel
+namespace MvvmLight4EF.ViewModel
 {
     /// <summary>
     /// This class contains static references to all the view models in the

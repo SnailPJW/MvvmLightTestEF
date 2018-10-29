@@ -2,9 +2,9 @@
                          //1.ICleanup            接口。实现该接口的ViewModel需要在Cleanup方法中释放资源，特别是-=event
                          //2.ObservableObject    该类实现了INotifyPropertyChanged接口，定义了一个可通知的对象基类，供ViewModelBase继承
                          //3.ViewModelBase       继承自ObsevableObject,ICleanup。将作为MvvmLight框架下使用的ViewModel的基类。主要提供Set和RaisePropertyChanged供外部使用。同时会在Cleanup方法里，Unregister该实例的所有MvvmLight Messager（在GalaSoft.MvvmLight.Messaging命名空间内定义）
-using MvvmLight.Model;
+using MvvmLight4EF.Model;
 
-namespace MvvmLight.ViewModel
+namespace MvvmLight4EF.ViewModel
 {
     /// <summary>
     /// This class contains properties that the main View can data bind to.

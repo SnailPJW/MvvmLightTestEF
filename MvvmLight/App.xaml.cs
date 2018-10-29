@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using GalaSoft.MvvmLight.Threading;
 
-namespace MvvmLight
+namespace MvvmLight4EF
 {
     /// <summary>
     /// Interaction logic for App.xaml

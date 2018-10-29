@@ -1,7 +1,7 @@
 ﻿using System.Windows;
-using MvvmLight.ViewModel;
+using MvvmLight4EF.ViewModel;
 
-namespace MvvmLight
+namespace MvvmLight4EF
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

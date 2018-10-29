@@ -1,7 +1,7 @@
 ﻿using System;
-using MvvmLight.Model;
+using MvvmLight4EF.Model;
 
-namespace MvvmLight.Design
+namespace MvvmLight4EF.Design
 {
     public class DesignDataService : IDataService
     {

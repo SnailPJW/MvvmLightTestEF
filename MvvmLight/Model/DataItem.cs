@@ -1,4 +1,4 @@
-﻿namespace MvvmLight.Model
+﻿namespace MvvmLight4EF.Model
 {
     public class DataItem
     {
