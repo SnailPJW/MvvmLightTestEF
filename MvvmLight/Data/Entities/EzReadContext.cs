@@ -1,4 +1,5 @@
-﻿using MvvmLight4EF.Data.Tables;
+﻿using MvvmLight.Data.Maps;
+using MvvmLight4EF.Data.Tables;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -39,6 +40,14 @@ namespace MvvmLight.Data.Entities
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
+            modelBuilder.Configurations.Add(new PatientMap());
+
+            //Explict Foreign Key naming
+            modelBuilder.Entity<Record>()
+                .HasRequired(record => record.Patient)
+                .WithRequiredDependent()
+                .Map(patient => patient.MapKey("PatientId"));
         }
     }
 }

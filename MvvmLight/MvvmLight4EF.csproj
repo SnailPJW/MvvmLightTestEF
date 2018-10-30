@@ -93,12 +93,22 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Data\Entities\EzReadContext.cs" />
+    <Compile Include="Data\Maps\RecordMap.cs" />
+    <Compile Include="Data\Maps\PatientMap.cs" />
     <Compile Include="Data\Tables\Record.cs" />
     <Compile Include="Data\Tables\Patient.cs" />
     <Compile Include="Design\DesignDataService.cs" />
     <Compile Include="Migrations\201810300308280_NewDirectory.cs" />
     <Compile Include="Migrations\201810300308280_NewDirectory.Designer.cs">
       <DependentUpon>201810300308280_NewDirectory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810300516176_TryFluentAPI.cs" />
+    <Compile Include="Migrations\201810300516176_TryFluentAPI.Designer.cs">
+      <DependentUpon>201810300516176_TryFluentAPI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810300522033_CommentMapKey.cs" />
+    <Compile Include="Migrations\201810300522033_CommentMapKey.Designer.cs">
+      <DependentUpon>201810300522033_CommentMapKey.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\DataItem.cs" />
@@ -139,6 +149,12 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201810300308280_NewDirectory.resx">
       <DependentUpon>201810300308280_NewDirectory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810300516176_TryFluentAPI.resx">
+      <DependentUpon>201810300516176_TryFluentAPI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810300522033_CommentMapKey.resx">
+      <DependentUpon>201810300522033_CommentMapKey.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
