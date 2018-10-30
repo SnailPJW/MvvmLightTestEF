@@ -17,9 +17,19 @@ namespace MvvmLight.Data.Entities
         //    //we don't want Entity Framework to create the database, we just want to access it.
         //    Database.SetInitializer<EzReadContext>(null);
         //}
-        ~EzReadContext()
+        //~EzReadContext()
+        //{
+        //    this.Dispose();
+        //}
+        public EzReadContext() : base("name = DefaultEntity")
         {
-            this.Dispose();
+            //this.Dispose();
+            //Database.SetInitializer<EzReadContext>(null);
+            AppDomain.CurrentDomain.SetData("DataDirectory",
+              System.IO.Path.GetFullPath(AppDomain.CurrentDomain.BaseDirectory + "../../App_Data"));
+            //System.IO.Path.GetFullPath(AppDomain.CurrentDomain.BaseDirectory) 取得目前執行檔的所在目錄
+            //Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData));
+            //CommonApplicationData 目录，它用作所有用户使用的应用程序特定数据的公共储存库(C:\ProgramData\)。ref : https://blog.csdn.net/swort_177/article/details/4580359
         }
 
         public DbSet<Patient> Patients { set; get; }
