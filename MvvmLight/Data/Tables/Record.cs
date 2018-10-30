@@ -19,8 +19,7 @@ namespace MvvmLight4EF.Data.Tables
         //Navigation property
         //public Patient Patient { get; set; }
         //Foreign Key Convention
-        //public long PatientId { get; set; }
-        [ForeignKey("PatientId")]
+        public long PatientId { get; set; }
         public virtual Patient Patient { get; set; }
     }
 }

@@ -81,6 +81,11 @@
     <Compile Include="Data\Tables\Record.cs" />
     <Compile Include="Data\Tables\Patient.cs" />
     <Compile Include="Design\DesignDataService.cs" />
+    <Compile Include="Migrations\201810300135315_Initial.cs" />
+    <Compile Include="Migrations\201810300135315_Initial.Designer.cs">
+      <DependentUpon>201810300135315_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\DataItem.cs" />
     <Compile Include="Model\DataService.cs" />
     <Compile Include="Model\IDataService.cs" />
@@ -117,6 +122,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\201810300135315_Initial.resx">
+      <DependentUpon>201810300135315_Initial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

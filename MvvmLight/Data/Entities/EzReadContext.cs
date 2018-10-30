@@ -11,11 +11,15 @@ namespace MvvmLight.Data.Entities
 {
     public class EzReadContext : DbContext
     {
-        public EzReadContext(string connectionString) : base(connectionString)
+        //public EzReadContext(string connectionString) : base(connectionString)
+        //{
+        //    //in the constructor of our context we need to set database initializer to null
+        //    //we don't want Entity Framework to create the database, we just want to access it.
+        //    Database.SetInitializer<EzReadContext>(null);
+        //}
+        ~EzReadContext()
         {
-            //in the constructor of our context we need to set database initializer to null
-            //we don't want Entity Framework to create the database, we just want to access it.
-            Database.SetInitializer<EzReadContext>(null);
+            this.Dispose();
         }
 
         public DbSet<Patient> Patients { set; get; }
