@@ -11,7 +11,17 @@ namespace MvvmLight.Data.Entities
 {
     public class EzReadContext : DbContext
     {
-        public DbSet<Record> Patients { set; get; }
+        public EzReadContext(string connectionString) : base(connectionString)
+        {
+            //in the constructor of our context we need to set database initializer to null
+            //we don't want Entity Framework to create the database, we just want to access it.
+            Database.SetInitializer<EzReadContext>(null);
+        }
+
+        public DbSet<Patient> Patients { set; get; }
+
+        public DbSet<Record> Records { set; get; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
